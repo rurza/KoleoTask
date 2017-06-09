@@ -19,6 +19,8 @@
 		5BE2ED521EEB3F3100AA0A84 /* KoleoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */; };
 		5BE2ED531EEB3F3100AA0A84 /* KoleoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */; };
 		5BE2ED541EEB3F3600AA0A84 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */; };
+		62C94184FA10755EB756D02C /* Pods_KoleoTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3604AD029CE443C004236E6 /* Pods_KoleoTaskTests.framework */; };
+		B562B0C57CA794F4886EFCC2 /* Pods_KoleoTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E823CA93CDF31B9C20F6E41 /* Pods_KoleoTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E823CA93CDF31B9C20F6E41 /* Pods_KoleoTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoleoTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE2ED261EEB30EE00AA0A84 /* KoleoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoleoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE2ED291EEB30EF00AA0A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE2ED2E1EEB30EF00AA0A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +49,11 @@
 		5BE2ED4D1EEB3A5A00AA0A84 /* DistanceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewModel.swift; sourceTree = "<group>"; };
 		5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoleoClient.swift; sourceTree = "<group>"; };
+		5C7BA7A3C6D0D07421E8883D /* Pods-KoleoTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoleoTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoleoTask/Pods-KoleoTask.debug.xcconfig"; sourceTree = "<group>"; };
+		614818C81104898E23F58321 /* Pods-KoleoTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoleoTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoleoTask/Pods-KoleoTask.release.xcconfig"; sourceTree = "<group>"; };
+		821F6075CF70DAD36CDB86E3 /* Pods-KoleoTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoleoTaskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoleoTaskTests/Pods-KoleoTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3604AD029CE443C004236E6 /* Pods_KoleoTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoleoTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC37EA5353ECE9E3F930DC87 /* Pods-KoleoTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoleoTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoleoTaskTests/Pods-KoleoTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B562B0C57CA794F4886EFCC2 /* Pods_KoleoTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C94184FA10755EB756D02C /* Pods_KoleoTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +82,8 @@
 				5BE2ED281EEB30EE00AA0A84 /* KoleoTask */,
 				5BE2ED3D1EEB30EF00AA0A84 /* KoleoTaskTests */,
 				5BE2ED271EEB30EE00AA0A84 /* Products */,
+				DD7E564E25868083773F72D0 /* Pods */,
+				B1D813A36605D11199745F58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +122,26 @@
 			path = KoleoTaskTests;
 			sourceTree = "<group>";
 		};
+		B1D813A36605D11199745F58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E823CA93CDF31B9C20F6E41 /* Pods_KoleoTask.framework */,
+				B3604AD029CE443C004236E6 /* Pods_KoleoTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD7E564E25868083773F72D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BA7A3C6D0D07421E8883D /* Pods-KoleoTask.debug.xcconfig */,
+				614818C81104898E23F58321 /* Pods-KoleoTask.release.xcconfig */,
+				821F6075CF70DAD36CDB86E3 /* Pods-KoleoTaskTests.debug.xcconfig */,
+				FC37EA5353ECE9E3F930DC87 /* Pods-KoleoTaskTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE2ED431EEB30EF00AA0A84 /* Build configuration list for PBXNativeTarget "KoleoTask" */;
 			buildPhases = (
+				EF84EA8CBE067021885B465A /* [CP] Check Pods Manifest.lock */,
 				5BE2ED221EEB30EE00AA0A84 /* Sources */,
 				5BE2ED231EEB30EE00AA0A84 /* Frameworks */,
 				5BE2ED241EEB30EE00AA0A84 /* Resources */,
+				AF3FFB5BCCA07159975041DD /* [CP] Embed Pods Frameworks */,
+				A72891439B5158805A3BE8F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BE2ED461EEB30EF00AA0A84 /* Build configuration list for PBXNativeTarget "KoleoTaskTests" */;
 			buildPhases = (
+				6F035D7173FB60196825E0D9 /* [CP] Check Pods Manifest.lock */,
 				5BE2ED361EEB30EF00AA0A84 /* Sources */,
 				5BE2ED371EEB30EF00AA0A84 /* Frameworks */,
 				5BE2ED381EEB30EF00AA0A84 /* Resources */,
+				0874CF332A27296D0367F9FE /* [CP] Embed Pods Frameworks */,
+				0A6924A1557837D55B61B815 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +247,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0874CF332A27296D0367F9FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoleoTaskTests/Pods-KoleoTaskTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A6924A1557837D55B61B815 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoleoTaskTests/Pods-KoleoTaskTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F035D7173FB60196825E0D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A72891439B5158805A3BE8F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoleoTask/Pods-KoleoTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3FFB5BCCA07159975041DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoleoTask/Pods-KoleoTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF84EA8CBE067021885B465A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BE2ED221EEB30EE00AA0A84 /* Sources */ = {
@@ -359,6 +490,7 @@
 		};
 		5BE2ED441EEB30EF00AA0A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7BA7A3C6D0D07421E8883D /* Pods-KoleoTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F58772G67J;
@@ -373,6 +505,7 @@
 		};
 		5BE2ED451EEB30EF00AA0A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 614818C81104898E23F58321 /* Pods-KoleoTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F58772G67J;
@@ -387,6 +520,7 @@
 		};
 		5BE2ED471EEB30EF00AA0A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821F6075CF70DAD36CDB86E3 /* Pods-KoleoTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -402,6 +536,7 @@
 		};
 		5BE2ED481EEB30EF00AA0A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC37EA5353ECE9E3F930DC87 /* Pods-KoleoTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
