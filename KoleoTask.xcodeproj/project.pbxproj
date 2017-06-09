@@ -13,6 +13,12 @@
 		5BE2ED341EEB30EF00AA0A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2ED321EEB30EF00AA0A84 /* LaunchScreen.storyboard */; };
 		5BE2ED3F1EEB30EF00AA0A84 /* KoleoTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED3E1EEB30EF00AA0A84 /* KoleoTaskTests.swift */; };
 		5BE2ED4A1EEB353600AA0A84 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED491EEB353600AA0A84 /* DistanceViewController.swift */; };
+		5BE2ED4C1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED4B1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift */; };
+		5BE2ED4E1EEB3A5A00AA0A84 /* DistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED4D1EEB3A5A00AA0A84 /* DistanceViewModel.swift */; };
+		5BE2ED501EEB3AA900AA0A84 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */; };
+		5BE2ED521EEB3F3100AA0A84 /* KoleoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */; };
+		5BE2ED531EEB3F3100AA0A84 /* KoleoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */; };
+		5BE2ED541EEB3F3600AA0A84 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,10 @@
 		5BE2ED3E1EEB30EF00AA0A84 /* KoleoTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoleoTaskTests.swift; sourceTree = "<group>"; };
 		5BE2ED401EEB30EF00AA0A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE2ED491EEB353600AA0A84 /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		5BE2ED4B1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
+		5BE2ED4D1EEB3A5A00AA0A84 /* DistanceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewModel.swift; sourceTree = "<group>"; };
+		5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoleoClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,10 @@
 				5BE2ED321EEB30EF00AA0A84 /* LaunchScreen.storyboard */,
 				5BE2ED351EEB30EF00AA0A84 /* Info.plist */,
 				5BE2ED491EEB353600AA0A84 /* DistanceViewController.swift */,
+				5BE2ED4B1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift */,
+				5BE2ED4D1EEB3A5A00AA0A84 /* DistanceViewModel.swift */,
+				5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */,
+				5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */,
 			);
 			path = KoleoTask;
 			sourceTree = "<group>";
@@ -202,6 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE2ED2A1EEB30EF00AA0A84 /* AppDelegate.swift in Sources */,
+				5BE2ED501EEB3AA900AA0A84 /* Station.swift in Sources */,
+				5BE2ED4E1EEB3A5A00AA0A84 /* DistanceViewModel.swift in Sources */,
+				5BE2ED521EEB3F3100AA0A84 /* KoleoClient.swift in Sources */,
+				5BE2ED4C1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift in Sources */,
 				5BE2ED4A1EEB353600AA0A84 /* DistanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE2ED3F1EEB30EF00AA0A84 /* KoleoTaskTests.swift in Sources */,
+				5BE2ED541EEB3F3600AA0A84 /* Station.swift in Sources */,
+				5BE2ED531EEB3F3100AA0A84 /* KoleoClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
         <!--Odległość-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KoleoTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DistanceViewController" customModule="KoleoTask" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,6 +33,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="knB-7p-0ln"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Do" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m70-Rq-U70">
                                         <rect key="frame" x="13" y="70" width="349" height="40"/>
@@ -42,6 +45,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="KUb-Nr-rcH"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -80,6 +86,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NX8-QC-5pM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BGL-UH-OBb"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="3ZQ-Z6-amg">
                                 <rect key="frame" x="0.0" y="523" width="375" height="80"/>
@@ -110,6 +120,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Odległość" id="L1u-md-rsm"/>
+                    <connections>
+                        <outlet property="distanceInfoLabel" destination="3ZQ-Z6-amg" id="QUb-Mg-vIy"/>
+                        <outlet property="fromSearchTextField" destination="uhA-M3-gsO" id="2ZQ-Ph-P1R"/>
+                        <outlet property="mapView" destination="YhZ-Dw-pKu" id="0Ku-XT-bql"/>
+                        <outlet property="tableView" destination="jor-db-3lJ" id="sB6-Hs-wu2"/>
+                        <outlet property="tableViewBottomConstraint" destination="0kl-zM-hPe" id="xEQ-DU-WOr"/>
+                        <outlet property="toSearchTextField" destination="m70-Rq-U70" id="PdN-Gf-QVQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +142,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.15782210229999999" green="0.19171398880000001" blue="0.4580168724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
