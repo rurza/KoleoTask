@@ -6,8 +6,7 @@ target 'KoleoTask' do
   use_frameworks!
 
   # Pods for KoleoTask
-  pod "AwesomeCache", "~> 3.0"
-
+  pod 'Cache'
   target 'KoleoTaskTests' do
     inherit! :search_paths
     # Pods for testing

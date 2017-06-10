@@ -8,15 +8,16 @@
 
 import UIKit
 
-class DistanceViewModel: NSObject {
+class DistanceViewModel: NSObject, KoleoCache {
     
     var filteredStations: [Station]?
     let stations: [Station]?
-    
+    let koleoClient = KoleoClient.shared
     
     init(handler: (Error?)) {
         stations = nil
         super.init()
+        koleoClient.cacheDelegate = self
     }
     
     func filterStations(phrase: String, handler: os_block_t) {
@@ -32,6 +33,15 @@ class DistanceViewModel: NSObject {
     }
     
     func downloadResults(handler: (Error?)) {
+        
+    }
+    
+    //MARK: KoleoCache
+    func setObject(_ object: Any, forKey key: String) {
+
+    }
+    
+    func object(forKey key: String) -> Any? {
         
     }
 
