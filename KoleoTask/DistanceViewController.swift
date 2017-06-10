@@ -84,6 +84,7 @@ class DistanceViewController: UIViewController, UITableViewDataSource, UITableVi
         currentTextField.resignFirstResponder()
         tableView.isHidden = true
         let annotations = viewModel.addStation(atIndexPath: indexPath, withPoint: currentTextField == fromSearchTextField ? .from : .to)
+        currentTextField.text = viewModel.stationName(forIndexPath: indexPath)
         if let annotationToDelete = annotations.toDelete {
             mapView.removeAnnotation(annotationToDelete)
         }
@@ -102,6 +103,9 @@ class DistanceViewController: UIViewController, UITableViewDataSource, UITableVi
             distanceInfoLabel.text = nil
         }
         mapView.showAnnotations(self.mapView.annotations, animated: true)
+        if currentTextField == fromSearchTextField {
+            toSearchTextField.becomeFirstResponder()
+        }
     }
     
     //MARK: Textfields
