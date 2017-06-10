@@ -45,6 +45,7 @@
 		5B64543F1EEBF28500E92DDB /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5B8FB34F1EEC1C95004FDC94 /* KoleoStationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoleoStationTests.swift; sourceTree = "<group>"; };
 		5B8FB3511EEC2726004FDC94 /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		5B8FB3551EEC2E9E004FDC94 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5BE2ED261EEB30EE00AA0A84 /* KoleoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoleoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE2ED291EEB30EF00AA0A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE2ED2E1EEB30EF00AA0A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 			children = (
 				5B8FB3511EEC2726004FDC94 /* stations.json */,
 				5BE2ED3E1EEB30EF00AA0A84 /* KoleoTaskTests.swift */,
+				5B8FB3551EEC2E9E004FDC94 /* README.md */,
 				5BE2ED401EEB30EF00AA0A84 /* Info.plist */,
 				5B8FB34F1EEC1C95004FDC94 /* KoleoStationTests.swift */,
 			);
