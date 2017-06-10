@@ -7,18 +7,12 @@
 //
 
 import UIKit
+import Cache
 
-class DistanceViewModel: NSObject, KoleoCache {
+class DistanceViewModel: NSObject {
     
     var filteredStations: [Station]?
-    let stations: [Station]?
-    let koleoClient = KoleoClient.shared
-    
-    init(handler: (Error?)) {
-        stations = nil
-        super.init()
-        koleoClient.cacheDelegate = self
-    }
+    let stations = (UIApplication.shared.delegate as! AppDelegate).dataController?.stations
     
     func filterStations(phrase: String, handler: os_block_t) {
         if phrase.characters.count > 0 {
@@ -32,17 +26,13 @@ class DistanceViewModel: NSObject, KoleoCache {
         }
     }
     
-    func downloadResults(handler: (Error?)) {
-        
+    func numberOfFilteredStations() -> Int {
+        return filteredStations?.count ?? 0
     }
     
-    //MARK: KoleoCache
-    func setObject(_ object: Any, forKey key: String) {
-
+    func station(forIndexPath indexPath: IndexPath) -> Station {
+        return filteredStations![indexPath.row]
     }
     
-    func object(forKey key: String) -> Any? {
-        
-    }
 
 }

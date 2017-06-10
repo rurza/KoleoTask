@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cache
 
 enum HTTPMethod: String {
     case GET
@@ -17,16 +18,16 @@ enum KoleoClientError: Error {
     case wrongJSONFormat
 }
 
-protocol KoleoCache {
-    func object(forKey key: String) -> Any?
-    func setObject(_ object: Any, forKey key: String)
+protocol KoleoCacheDelegate {
+    func object(forKey key: String) -> JSON?
+    func setObject(_ object: [Any], forKey key: String)
 }
 
 class KoleoClient {
     
     static let shared = KoleoClient()
     let session = URLSession(configuration: URLSessionConfiguration.default)
-    var cacheDelegate: KoleoCache? = nil
+    var cacheDelegate: KoleoCacheDelegate? = nil
     
     let mainURLString = "https://koleo.pl/api/android/v1"
     let stationsEndpoint = "/stations.json"
@@ -56,7 +57,7 @@ class KoleoClient {
     
     
     //MARK: PRIVATE
-    fileprivate func performApiCall(httpMethod: HTTPMethod, url: URL, headers:[String:String]?, body:Data?, handler:@escaping (Error?, Any?) -> Void) {
+    fileprivate func performApiCall(httpMethod: HTTPMethod, url: URL, headers:[String:String]?, body:Data?, handler:@escaping (Error?, [Any]?) -> Void) {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15)
         request.httpBody = body
         request.allHTTPHeaderFields = headers
@@ -66,7 +67,7 @@ class KoleoClient {
             guard error == nil else {
                 if let cache = self.cacheDelegate {
                     if let cachedObject = cache.object(forKey: url.absoluteString) {
-                        DispatchQueue.main.async { handler(nil, cachedObject) }
+                        DispatchQueue.main.async { handler(nil, cachedObject.object as? [Any]) }
                         return
                     }
                 }
@@ -77,10 +78,15 @@ class KoleoClient {
             if let data = responseData {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                    if let cache = self.cacheDelegate {
-                        cache.setObject(json, forKey: url.absoluteString)
+                    if json is Array<Any> {
+                        let jsonArray = json as! Array<Any>
+                        if let cache = self.cacheDelegate {
+                            cache.setObject(jsonArray, forKey: url.absoluteString)
+                        }
+                        DispatchQueue.main.async { handler(nil, jsonArray) }
+                    } else {
+                        DispatchQueue.main.async { handler(KoleoClientError.wrongJSONFormat, nil) }
                     }
-                    DispatchQueue.main.async { handler(nil, json) }
                 } catch {
                     DispatchQueue.main.async { handler(error, nil) }
                 }
@@ -89,7 +95,6 @@ class KoleoClient {
             }
         }
     }
-    
     
     
 }
