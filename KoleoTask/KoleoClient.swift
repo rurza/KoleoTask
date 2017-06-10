@@ -37,15 +37,16 @@ class KoleoClient {
         let url = URL(string: "\(mainURLString)\(stationsEndpoint)")
         assert(url != nil)
         performApiCall(httpMethod: .GET, url: url!, headers: nil, body: nil) { (error, json) in
-            guard error != nil else {
+            guard error == nil else {
                 handler(error!, nil)
                 return
             }
             if json! is Array<[String: Any]> {
                 var stations = Array<Station>()
                 for dict in json as! Array<[String: Any]> {
-                    let station = Station(jsonDict: dict)
-                    stations.append(station)
+                    if let station = Station(jsonDict: dict) {
+                        stations.append(station)
+                    }
                 }
                 stations.sort { return $0.name < $1.name }
                 handler(nil, stations)
@@ -58,6 +59,7 @@ class KoleoClient {
     
     //MARK: PRIVATE
     fileprivate func performApiCall(httpMethod: HTTPMethod, url: URL, headers:[String:String]?, body:Data?, handler:@escaping (Error?, [Any]?) -> Void) {
+        
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15)
         request.httpBody = body
         request.allHTTPHeaderFields = headers
@@ -93,7 +95,7 @@ class KoleoClient {
             } else {
                 DispatchQueue.main.async { handler(KoleoClientError.undefinedError, nil) }
             }
-        }
+        }.resume()
     }
     
     

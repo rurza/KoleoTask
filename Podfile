@@ -7,6 +7,8 @@ target 'KoleoTask' do
 
   # Pods for KoleoTask
   pod 'Cache'
+  pod 'NVActivityIndicatorView'
+
   target 'KoleoTaskTests' do
     inherit! :search_paths
     # Pods for testing

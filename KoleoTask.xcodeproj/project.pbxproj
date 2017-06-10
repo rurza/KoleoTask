@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B64543C1EEBEAD000E92DDB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64543B1EEBEAD000E92DDB /* DataController.swift */; };
+		5B64543E1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64543D1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift */; };
+		5B6454401EEBF28500E92DDB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64543F1EEBF28500E92DDB /* RoundedButton.swift */; };
 		5BE2ED2A1EEB30EF00AA0A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED291EEB30EF00AA0A84 /* AppDelegate.swift */; };
 		5BE2ED2F1EEB30EF00AA0A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2ED2D1EEB30EF00AA0A84 /* Main.storyboard */; };
 		5BE2ED311EEB30EF00AA0A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2ED301EEB30EF00AA0A84 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		1E823CA93CDF31B9C20F6E41 /* Pods_KoleoTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoleoTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B64543B1EEBEAD000E92DDB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		5B64543D1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingDataInfoViewController.swift; sourceTree = "<group>"; };
+		5B64543F1EEBF28500E92DDB /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5BE2ED261EEB30EE00AA0A84 /* KoleoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoleoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE2ED291EEB30EF00AA0A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE2ED2E1EEB30EF00AA0A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,11 +111,13 @@
 				5BE2ED321EEB30EF00AA0A84 /* LaunchScreen.storyboard */,
 				5BE2ED351EEB30EF00AA0A84 /* Info.plist */,
 				5BE2ED491EEB353600AA0A84 /* DistanceViewController.swift */,
-				5BE2ED4B1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift */,
 				5BE2ED4D1EEB3A5A00AA0A84 /* DistanceViewModel.swift */,
 				5B64543B1EEBEAD000E92DDB /* DataController.swift */,
-				5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */,
 				5BE2ED511EEB3F3100AA0A84 /* KoleoClient.swift */,
+				5BE2ED4F1EEB3AA900AA0A84 /* Station.swift */,
+				5B64543D1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift */,
+				5B64543F1EEBF28500E92DDB /* RoundedButton.swift */,
+				5BE2ED4B1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift */,
 			);
 			path = KoleoTask;
 			sourceTree = "<group>";
@@ -353,7 +359,9 @@
 				5BE2ED2A1EEB30EF00AA0A84 /* AppDelegate.swift in Sources */,
 				5BE2ED501EEB3AA900AA0A84 /* Station.swift in Sources */,
 				5BE2ED4E1EEB3A5A00AA0A84 /* DistanceViewModel.swift in Sources */,
+				5B6454401EEBF28500E92DDB /* RoundedButton.swift in Sources */,
 				5BE2ED521EEB3F3100AA0A84 /* KoleoClient.swift in Sources */,
+				5B64543E1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift in Sources */,
 				5BE2ED4C1EEB35AA00AA0A84 /* UINavigationController+StatusBar.swift in Sources */,
 				5BE2ED4A1EEB353600AA0A84 /* DistanceViewController.swift in Sources */,
 			);

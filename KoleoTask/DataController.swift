@@ -11,6 +11,7 @@ import Cache
 
 class DataController: NSObject, KoleoCacheDelegate {
     
+    static let shared = DataController()
     var stations: [Station]?
     let koleoClient = KoleoClient.shared
     let cache = HybridCache(name: "KoleoClientCache", config: Config(
@@ -23,14 +24,14 @@ class DataController: NSObject, KoleoCacheDelegate {
                                                             true).first! + "/KoleoClient"))
     
     
+
     
-    init(handler: @escaping (Error?) -> Void) {
+    override init() {
         super.init()
         koleoClient.cacheDelegate = self
-        downloadResults { handler($0) }
     }
     
-    func downloadResults(handler: @escaping (Error?) -> Void) {
+    func downloadStations(handler: @escaping (Error?) -> Void) {
         koleoClient.getStations { (error, stations) in
             guard error == nil else {
                 handler(error!)
@@ -39,6 +40,7 @@ class DataController: NSObject, KoleoCacheDelegate {
             if stations != nil {
                 self.stations = stations!
             }
+            handler(nil)
         }
     }
     

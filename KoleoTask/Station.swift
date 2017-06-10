@@ -23,12 +23,17 @@ class Station: NSObject, NSCoding {
         return point
     }()
     
-    init(jsonDict: [String:Any]) {
-        longitude = jsonDict["longitudea"] as! CLLocationDegrees
-        latitude = jsonDict["latitude"] as! CLLocationDegrees
-        name = jsonDict["name"] as! String
-        id = jsonDict["id"] as! Int
-        super.init()
+    init?(jsonDict: [String:Any]) {
+        guard let id = jsonDict["id"] as? Int,
+            let longitude = jsonDict["longitude"] as? CLLocationDegrees,
+            let latitude = jsonDict["latitude"] as? CLLocationDegrees,
+            let name = jsonDict["name"] as? String else {
+                return nil
+        }
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.id = id
     }
     
     public func encode(with aCoder: NSCoder) {

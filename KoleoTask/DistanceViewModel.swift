@@ -8,13 +8,20 @@
 
 import UIKit
 import Cache
+import MapKit
+
+enum StationPoint {
+    case from
+    case to
+}
 
 class DistanceViewModel: NSObject {
     
     var filteredStations: [Station]?
-    let stations = (UIApplication.shared.delegate as! AppDelegate).dataController?.stations
+    let stations = DataController.shared.stations
+    var chosenStations:(fromStation: Station?, toStation: Station?) = (nil, nil)
     
-    func filterStations(phrase: String, handler: os_block_t) {
+    func filterStations(phrase: String, handler: (Int) -> Void) {
         if phrase.characters.count > 0 {
             filteredStations = stations?.filter({ (station) -> Bool in
                 if station.name.localizedCaseInsensitiveContains(phrase) {
@@ -22,7 +29,9 @@ class DistanceViewModel: NSObject {
                 }
                 return false
             })
-            handler()
+            handler(filteredStations?.count ?? 0)
+        } else {
+            handler(0)
         }
     }
     
@@ -30,9 +39,42 @@ class DistanceViewModel: NSObject {
         return filteredStations?.count ?? 0
     }
     
-    func station(forIndexPath indexPath: IndexPath) -> Station {
-        return filteredStations![indexPath.row]
+    func stationName(forIndexPath indexPath: IndexPath) -> String {
+        return filteredStations![indexPath.row].name
     }
     
+    func addStation(atIndexPath indexPath: IndexPath, withPoint point: StationPoint) -> (toDelete: MKPointAnnotation?, toAdd: MKPointAnnotation) {
+        var stationToDelete: Station? = nil
+        let stationToAdd: Station = filteredStations![indexPath.row]
+        switch point {
+        case .from:
+            if let existingStation = chosenStations.fromStation {
+                stationToDelete = existingStation
+            }
+            chosenStations.fromStation = stationToAdd
+        case .to:
+            if let existingStation = chosenStations.toStation {
+                stationToDelete = existingStation
+            }
+            chosenStations.toStation = stationToAdd
+        }
+        return (stationToDelete?.annotation, stationToAdd.annotation)
+    }
 
+    func distanceString() -> String? {
+        if bothStations() {
+            let distance = chosenStations.fromStation!.distanceBetween(chosenStations.toStation!)
+            return distance
+        } else {
+            return nil
+        }
+    }
+    
+    func bothStations() -> Bool {
+        if chosenStations.fromStation != nil && chosenStations.toStation != nil {
+            return true
+        }
+        return false
+    }
+    
 }
