@@ -13,6 +13,8 @@
 * Potwierdź zmiany
 * Odpal aplikację na telefonie :)
 
+
+
 ##Uwaga! Aplikacja nie odpali się na innych urządzeniach niż moje developerskie + te podane w zadaniu
 
 
