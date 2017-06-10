@@ -8,12 +8,12 @@
 
 import MapKit
 
-class Station: NSObject, NSCoding {
+class Station: NSCoding, Equatable {
     
-    let longitude: CLLocationDegrees
-    let latitude: CLLocationDegrees
-    let name: String
-    let id: Int
+    @objc let longitude: CLLocationDegrees
+    @objc let latitude: CLLocationDegrees
+    @objc let name: String
+    @objc let id: Int
     
     lazy var annotation: MKPointAnnotation = {
         let point = MKPointAnnotation()
@@ -48,7 +48,6 @@ class Station: NSObject, NSCoding {
         latitude = aDecoder.decodeDouble(forKey: #keyPath(Station.latitude))
         longitude = aDecoder.decodeDouble(forKey: #keyPath(Station.longitude))
         id = aDecoder.decodeInteger(forKey: #keyPath(Station.id))
-        super.init()
     }
     
     func distanceBetween(_ station: Station) -> String {
@@ -59,10 +58,16 @@ class Station: NSObject, NSCoding {
         return formatter.string(fromDistance: distance)
     }
     
-    override var description: String {
+    
+    var description: String {
         get {
             return "\(name), \(latitude):\(longitude)"
         }
     }
+    
+    public static func ==(lhs: Station, rhs: Station) -> Bool {
+        return lhs.id == rhs.id
+    }
 
 }
+
