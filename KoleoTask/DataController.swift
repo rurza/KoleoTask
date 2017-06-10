@@ -15,7 +15,7 @@ class DataController: NSObject, KoleoCacheDelegate {
     var stations: [Station]?
     let koleoClient = KoleoClient.shared
     let cache = HybridCache(name: "KoleoClientCache", config: Config(
-        expiry: .date(Date().addingTimeInterval(60*60*24)),
+        expiry: .date(Date().addingTimeInterval(60 * 60 * 24)),
         memoryCountLimit: 0,
         memoryTotalCostLimit: 0,
         maxDiskSize: 5242880,

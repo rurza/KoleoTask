@@ -10,6 +10,7 @@
 		5B64543C1EEBEAD000E92DDB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64543B1EEBEAD000E92DDB /* DataController.swift */; };
 		5B64543E1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64543D1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift */; };
 		5B6454401EEBF28500E92DDB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64543F1EEBF28500E92DDB /* RoundedButton.swift */; };
+		5B8FB3501EEC1C95004FDC94 /* KoleoStationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FB34F1EEC1C95004FDC94 /* KoleoStationTests.swift */; };
 		5BE2ED2A1EEB30EF00AA0A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2ED291EEB30EF00AA0A84 /* AppDelegate.swift */; };
 		5BE2ED2F1EEB30EF00AA0A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2ED2D1EEB30EF00AA0A84 /* Main.storyboard */; };
 		5BE2ED311EEB30EF00AA0A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2ED301EEB30EF00AA0A84 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		5B64543B1EEBEAD000E92DDB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		5B64543D1EEBED9000E92DDB /* DownloadingDataInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingDataInfoViewController.swift; sourceTree = "<group>"; };
 		5B64543F1EEBF28500E92DDB /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5B8FB34F1EEC1C95004FDC94 /* KoleoStationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoleoStationTests.swift; sourceTree = "<group>"; };
 		5BE2ED261EEB30EE00AA0A84 /* KoleoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoleoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE2ED291EEB30EF00AA0A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE2ED2E1EEB30EF00AA0A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				5BE2ED3E1EEB30EF00AA0A84 /* KoleoTaskTests.swift */,
 				5BE2ED401EEB30EF00AA0A84 /* Info.plist */,
+				5B8FB34F1EEC1C95004FDC94 /* KoleoStationTests.swift */,
 			);
 			path = KoleoTaskTests;
 			sourceTree = "<group>";
@@ -220,10 +223,10 @@
 			};
 			buildConfigurationList = 5BE2ED211EEB30EE00AA0A84 /* Build configuration list for PBXProject "KoleoTask" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = Polish;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				pl,
 				Base,
 			);
 			mainGroup = 5BE2ED1D1EEB30EE00AA0A84;
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE2ED3F1EEB30EF00AA0A84 /* KoleoTaskTests.swift in Sources */,
+				5B8FB3501EEC1C95004FDC94 /* KoleoStationTests.swift in Sources */,
 				5BE2ED541EEB3F3600AA0A84 /* Station.swift in Sources */,
 				5BE2ED531EEB3F3100AA0A84 /* KoleoClient.swift in Sources */,
 			);

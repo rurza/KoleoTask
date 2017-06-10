@@ -103,9 +103,7 @@ class DistanceViewController: UIViewController, UITableViewDataSource, UITableVi
             distanceInfoLabel.text = nil
         }
         mapView.showAnnotations(self.mapView.annotations, animated: true)
-        if currentTextField == fromSearchTextField {
-            toSearchTextField.becomeFirstResponder()
-        }
+
     }
     
     //MARK: Textfields
@@ -137,16 +135,22 @@ class DistanceViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == fromSearchTextField {
-            toSearchTextField.becomeFirstResponder()
-            return true
-        }
-        if textField == toSearchTextField {
-            if viewModel.bothStations() {
-                textField.resignFirstResponder()
-                return true
+        if let filteredStations = viewModel.filteredStations {
+            if filteredStations.count > 0 {
+                self.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+                if textField == fromSearchTextField && !viewModel.bothStations() {
+                    toSearchTextField.becomeFirstResponder()
+                    return true
+                }
+                if textField == toSearchTextField {
+                    textField.resignFirstResponder()
+                    if viewModel.bothStations() {
+                        return true
+                    }
+                }
             }
         }
+
         return false
     }
     

@@ -24,10 +24,12 @@ class DistanceViewModel: NSObject {
     func filterStations(phrase: String, handler: (Int) -> Void) {
         if phrase.characters.count > 0 {
             filteredStations = stations?.filter({ (station) -> Bool in
-                if station.name.localizedCaseInsensitiveContains(phrase) {
+                let range = station.name.range(of: phrase, options: [.caseInsensitive, .diacriticInsensitive], range: station.name.startIndex..<station.name.endIndex, locale: Locale.current)
+                if range != nil {
                     return true
                 }
                 return false
+
             })
             handler(filteredStations?.count ?? 0)
         } else {

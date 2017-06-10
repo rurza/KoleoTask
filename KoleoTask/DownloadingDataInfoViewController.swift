@@ -38,12 +38,13 @@ class DownloadingDataInfoViewController: UIViewController {
 
     func downloadStations() {
         activityIndicatorView.startAnimating()
+        self.tryAgainButton.alpha = 0
         DataController.shared.downloadStations { (error) in
             if (error != nil) {
                 let alertViewController = UIAlertController(title: "Nie mogę pobrać zdjęć", message: error?.localizedDescription, preferredStyle: .alert)
                 alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                     UIView.animate(withDuration: 0.4, animations: {
-                        self.tryAgainButton.alpha = 0
+                        self.tryAgainButton.alpha = 1
                     })
                     
                 }))
